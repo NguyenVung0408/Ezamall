@@ -5,7 +5,7 @@ import purchaseApi from 'src/apis/purchase.api'
 import path from 'src/constants/path'
 import { purchasesStatus } from 'src/constants/purchase'
 import useQueryParams from 'src/hooks/useQueryParams'
-import { PurchaseListStatus } from 'src/types/purchase.type'
+import { type PurchaseListStatus } from 'src/types/purchase.type'
 import { formatCurrency, generateNameId } from 'src/utils/utils'
 
 const purchaseTabs = [

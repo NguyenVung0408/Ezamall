@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react'
-import { ExtendedPurchase } from 'src/types/purchase.type'
+import { type ExtendedPurchase } from 'src/types/purchase.type'
 import { type User } from 'src/types/user.type'
 import { getAccessTokenFromLS, getProfileFromLS } from 'src/utils/auth'
 
@@ -28,9 +28,9 @@ const initialAppContext = getInitialAppContext()
 export const AppContext = createContext<AppContextInterface>(initialAppContext)
 
 export const AppProvider = ({
-                              children,
-                              defaultValue = initialAppContext
-                            }: {
+  children,
+  defaultValue = initialAppContext
+}: {
   children: React.ReactNode
   defaultValue?: AppContextInterface
 }) => {

@@ -8,7 +8,11 @@ import { toast } from 'react-toastify'
 import ProductRating from 'src/components/ProductRating'
 import QuantityController from 'src/components/QuantityController'
 import { purchasesStatus } from 'src/constants/purchase'
+<<<<<<< HEAD
 import { Product as ProductType, ProductListConfig } from 'src/types/product.type'
+=======
+import type { Product as ProductType, ProductListConfig } from 'src/types/product.type'
+>>>>>>> 393f321 (Performance)
 import { formatCurrency, formatNumberToSocialStyle, getIdFromNameId, rateSale } from 'src/utils/utils'
 import Product from '../ProductList/components/Product'
 import path from 'src/constants/path'

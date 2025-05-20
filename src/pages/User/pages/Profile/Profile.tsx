@@ -9,9 +9,9 @@ import Input from 'src/components/Input'
 import InputFile from 'src/components/InputFile'
 import InputNumber from 'src/components/InputNumber'
 import { AppContext } from 'src/contexts/app.context'
-import { ErrorResponse } from 'src/types/utils.type'
+import { type ErrorResponse } from 'src/types/utils.type'
 import { setProfileToLS } from 'src/utils/auth'
-import { userSchema, UserSchema } from 'src/utils/rules'
+import { userSchema, type UserSchema } from 'src/utils/rules'
 import { getAvatarUrl, isAxiosUnprocessableEntityError } from 'src/utils/utils'
 import DateSelect from '../../components/DateSelect'
 
@@ -98,7 +98,7 @@ export default function Profile() {
       avatar: '',
       date_of_birth: new Date(1990, 0, 1)
     },
-    resolver: yupResolver<FormData>(profileSchema)
+    resolver: yupResolver<FormData, unknown, unknown>(profileSchema)
   })
   const {
     register,
@@ -156,9 +156,10 @@ export default function Profile() {
     }
   })
 
-  const handleChangeFile = (file?: File) => {
-    setFile(file)
-  }
+  const handleChangeFile = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files?.[0]
+      setFile(file)
+    }
 
   return (
     <div className='rounded-sm bg-white px-2 pb-10 shadow md:px-7 md:pb-20'>

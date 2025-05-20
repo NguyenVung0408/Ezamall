@@ -6,8 +6,8 @@ import { toast } from 'react-toastify'
 import userApi from 'src/apis/user.api'
 import Button from 'src/components/Button'
 import Input from 'src/components/Input'
-import { ErrorResponse, NoUndefinedField } from 'src/types/utils.type'
-import { userSchema, UserSchema } from 'src/utils/rules'
+import type { ErrorResponse, NoUndefinedField } from 'src/types/utils.type'
+import { userSchema, type UserSchema } from 'src/utils/rules'
 import { isAxiosUnprocessableEntityError } from 'src/utils/utils'
 import { ObjectSchema } from 'yup'
 
@@ -27,7 +27,7 @@ export default function ChangePassword() {
       confirm_password: '',
       new_password: ''
     },
-    resolver: yupResolver<FormData>(passwordSchema as ObjectSchema<FormData>)
+    resolver: yupResolver<FormData, unknown, FormData>(passwordSchema as ObjectSchema<FormData>)
   })
   const updateProfileMutation = useMutation({
     mutationFn: userApi.updateProfile
