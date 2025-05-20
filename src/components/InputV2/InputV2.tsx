@@ -1,5 +1,5 @@
-import { InputHTMLAttributes, useState } from 'react'
-import { FieldValues, FieldPath, useController, UseControllerProps } from 'react-hook-form'
+import {type  InputHTMLAttributes, useState } from 'react'
+import { type FieldValues, type FieldPath, useController, type UseControllerProps } from 'react-hook-form'
 
 export type InputNumberProps<
   TFieldValues extends FieldValues = FieldValues,
@@ -35,7 +35,9 @@ function InputV2<
       // Gọi field.onChange để cập nhật vào state React Hook Form
       field.onChange(event)
       // Thực thi onChange callback từ bên ngoài truyền vào props
-      onChange && onChange(event)
+      if (onChange) {
+        onChange(event)
+      }
     }
   }
 

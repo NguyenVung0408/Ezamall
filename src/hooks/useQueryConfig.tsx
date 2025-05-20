@@ -1,4 +1,4 @@
-import { ProductListConfig } from 'src/types/product.type'
+import { type ProductListConfig } from 'src/types/product.type'
 import omitBy from 'lodash/omitBy'
 import isUndefined from 'lodash/isUndefined'
 import useQueryParams from './useQueryParams'

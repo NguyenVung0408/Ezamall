@@ -1,5 +1,4 @@
-import { Component, ErrorInfo, ReactNode } from 'react'
-import { Link } from 'react-router-dom'
+import { Component, type ErrorInfo, type ReactNode } from 'react'
 
 interface Props {
   children?: ReactNode
@@ -14,7 +13,7 @@ export default class ErrorBoundary extends Component<Props, State> {
     hasError: false
   }
 
-  public static getDerivedStateFromError(_: Error): State {
+  public static getDerivedStateFromError(): State {
     // Update state so the next render will show the fallback UI.
     return { hasError: true }
   }

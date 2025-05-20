@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, useState } from 'react'
+import { type InputHTMLAttributes, useState } from 'react'
 import type { UseFormRegister, RegisterOptions, FieldValues, FieldPath } from 'react-hook-form'
 
 interface Props<TFieldValues extends FieldValues> extends InputHTMLAttributes<HTMLInputElement> {
@@ -8,7 +8,7 @@ interface Props<TFieldValues extends FieldValues> extends InputHTMLAttributes<HT
   classNameEye?: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register?: UseFormRegister<TFieldValues>
-  rules?: RegisterOptions
+  rules?: RegisterOptions<TFieldValues, FieldPath<TFieldValues>>
   name: FieldPath<TFieldValues>
 }
 
