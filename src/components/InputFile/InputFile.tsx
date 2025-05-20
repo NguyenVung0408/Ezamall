@@ -1,5 +1,4 @@
-import { forwardRef, useState } from 'react'
-import type { InputHTMLAttributes } from 'react'
+﻿import { forwardRef, InputHTMLAttributes, useState } from 'react'
 
 export interface InputNumberProps extends InputHTMLAttributes<HTMLInputElement> {
   errorMessage?: string
@@ -25,9 +24,7 @@ const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(function Inpu
     const { value } = event.target
     if (/^\d+$/.test(value) || value === '') {
       // Thực thi onChange callback từ bên ngoài truyền vào props
-      if (onChange) {
-        onChange(event)
-      }
+      onChange && onChange(event)
       // Cập nhật localValue state
       setLocalValue(value)
     }
