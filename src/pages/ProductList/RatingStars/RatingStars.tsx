@@ -19,6 +19,7 @@ interface Props {
 export default function RatingStars({ queryConfig }: Props) {
   const navigate = useNavigate()
 
+
   const handleFilterStar = (ratingFilter: number) => {
     navigate({
       pathname: path.home,
@@ -28,6 +29,7 @@ export default function RatingStars({ queryConfig }: Props) {
       }).toString()
     })
   }
+
 
   return (
     <ul className='my-3'>
