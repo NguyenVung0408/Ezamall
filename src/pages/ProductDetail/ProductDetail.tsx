@@ -125,7 +125,7 @@ export default function ProductDetail() {
   return (
     <div className='bg-gray-200 py-6'>
       <Helmet>
-        <title>{product.name} | Shopee Clone</title>
+        <title>{product.name} | Ezamall </title>
         <meta
           name='description'
           content={convert(product.description, {
@@ -176,7 +176,7 @@ export default function ProductDetail() {
                         alt={product.name}
                         className='absolute top-0 left-0 h-full w-full cursor-pointer bg-white object-cover'
                       />
-                      {isActive && <div className='absolute inset-0 border-2 border-orange' />}
+                      {isActive && <div className='absolute inset-0 border-2 border-blue' />}
                     </div>
                   )
                 })}
@@ -216,7 +216,7 @@ export default function ProductDetail() {
               </div>
               <div className='mt-8 flex items-center bg-gray-50 px-5 py-4'>
                 <div className='text-gray-500 line-through'>₫{formatCurrency(product.price_before_discount)}</div>
-                <div className='ml-3 text-3xl font-medium text-orange'>₫{formatCurrency(product.price)}</div>
+                <div className='ml-3 text-3xl font-medium text-blue'>₫{formatCurrency(product.price)}</div>
                 <div className='ml-4 rounded-sm bg-orange px-1 py-[2px] text-xs font-semibold uppercase text-white'>
                   {rateSale(product.price_before_discount, product.price)} giảm
                 </div>
@@ -237,14 +237,14 @@ export default function ProductDetail() {
               <div className='mt-8 flex items-center'>
                 <button
                   onClick={addToCart}
-                  className='flex h-12 items-center justify-center rounded-sm border border-orange bg-orange/10 px-5 capitalize text-orange shadow-sm hover:bg-orange/5'
+                  className='flex h-12 items-center justify-center rounded-sm border border-blue bg-blue/10 px-5 capitalize text-blue shadow-sm hover:bg-blue/5'
                 >
                   <svg
                     enableBackground='new 0 0 15 15'
                     viewBox='0 0 15 15'
                     x={0}
                     y={0}
-                    className='mr-[10px] h-5 w-5 fill-current stroke-orange text-orange'
+                    className='mr-[10px] h-5 w-5 fill-current stroke-blue text-blue'
                   >
                     <g>
                       <g>
@@ -266,7 +266,7 @@ export default function ProductDetail() {
                 </button>
                 <button
                   onClick={buyNow}
-                  className='fkex ml-4 h-12 min-w-[5rem] items-center justify-center rounded-sm bg-orange px-5 capitalize text-white shadow-sm outline-none hover:bg-orange/90'
+                  className='fkex ml-4 h-12 min-w-[5rem] items-center justify-center rounded-sm bg-blue px-5 capitalize text-white shadow-sm outline-none hover:bg-orange/90'
                 >
                   Mua ngay
                 </button>

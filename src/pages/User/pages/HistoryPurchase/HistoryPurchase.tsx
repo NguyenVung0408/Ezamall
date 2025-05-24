@@ -38,7 +38,7 @@ export default function HistoryPurchase() {
         }).toString()
       }}
       className={classNames('flex flex-1 items-center justify-center border-b-2 bg-white py-4 text-center', {
-        'border-b-orange text-orange': status === tab.status,
+        'border-b-blue text-blue': status === tab.status,
         'border-b-black/10 text-gray-900': status !== tab.status
       })}
     >
@@ -69,13 +69,13 @@ export default function HistoryPurchase() {
                     <span className='truncate text-gray-500 line-through'>
                       ₫{formatCurrency(purchase.product.price_before_discount)}
                     </span>
-                    <span className='ml-2 truncate text-orange'>₫{formatCurrency(purchase.product.price)}</span>
+                    <span className='ml-2 truncate text-blue'>₫{formatCurrency(purchase.product.price)}</span>
                   </div>
                 </Link>
                 <div className='flex justify-end'>
                   <div>
                     <span>Tổng giá tiền</span>
-                    <span className='ml-4 text-xl text-orange'>
+                    <span className='ml-4 text-xl text-blue'>
                       ₫{formatCurrency(purchase.product.price * purchase.buy_count)}
                     </span>
                   </div>

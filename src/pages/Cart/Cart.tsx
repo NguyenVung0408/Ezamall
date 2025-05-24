@@ -155,7 +155,7 @@ export default function Cart() {
                       <div className='flex flex-shrink-0 items-center justify-center pr-3'>
                         <input
                           type='checkbox'
-                          className='h-5 w-5 accent-orange'
+                          className='h-5 w-5 accent-blue'
                           checked={isAllChecked}
                           onChange={handleCheckAll}
                         />
@@ -184,7 +184,7 @@ export default function Cart() {
                             <div className='flex flex-shrink-0 items-center justify-center pr-3'>
                               <input
                                 type='checkbox'
-                                className='h-5 w-5 accent-orange'
+                                className='h-5 w-5 accent-blue'
                                 checked={purchase.checked}
                                 onChange={handleCheck(index)}
                               />
@@ -246,7 +246,7 @@ export default function Cart() {
                               />
                             </div>
                             <div className='col-span-1'>
-                              <span className='text-orange'>
+                              <span className='text-blue'>
                                 ₫{formatCurrency(purchase.product.price * purchase.buy_count)}
                               </span>
                             </div>
@@ -271,7 +271,7 @@ export default function Cart() {
                 <div className='flex flex-shrink-0 items-center justify-center pr-3'>
                   <input
                     type='checkbox'
-                    className='h-5 w-5 accent-orange'
+                    className='h-5 w-5 accent-blue'
                     checked={isAllChecked}
                     onChange={handleCheckAll}
                   />
@@ -288,11 +288,11 @@ export default function Cart() {
                 <div>
                   <div className='flex items-center sm:justify-end'>
                     <div>Tổng thanh toán ({checkedPurchasesCount} sản phẩm):</div>
-                    <div className='ml-2 text-2xl text-orange'>₫{formatCurrency(totalCheckedPurchasePrice)}</div>
+                    <div className='ml-2 text-2xl text-blue'>₫{formatCurrency(totalCheckedPurchasePrice)}</div>
                   </div>
                   <div className='flex items-center text-sm sm:justify-end'>
                     <div className='text-gray-500'>Tiết kiệm</div>
-                    <div className='ml-6 text-orange'>₫{formatCurrency(totalCheckedPurchaseSavingPrice)}</div>
+                    <div className='ml-6 text-blue'>₫{formatCurrency(totalCheckedPurchaseSavingPrice)}</div>
                   </div>
                 </div>
                 <Button
@@ -312,7 +312,7 @@ export default function Cart() {
             <div className='mt-5 text-center'>
               <Link
                 to={path.home}
-                className=' rounded-sm bg-orange px-10 py-2  uppercase text-white transition-all hover:bg-orange/80'
+                className=' rounded-sm bg-blue px-10 py-2  uppercase text-white transition-all hover:bg-orange/80'
               >
                 Mua ngay
               </Link>
